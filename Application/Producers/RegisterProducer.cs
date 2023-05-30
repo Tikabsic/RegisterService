@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 using RabbitMQ.Client;
 using System.Text;
 
-namespace Application.Producers.RegisterProducer
+namespace Application.Producers
 {
     internal class RegisterProducer
     {
@@ -21,7 +21,7 @@ namespace Application.Producers.RegisterProducer
                 UserName = "guest",
                 Password = "guest"
             };
-            
+
             var connection = factory.CreateConnection();
             _channel = connection.CreateModel();
             _queue = queue;

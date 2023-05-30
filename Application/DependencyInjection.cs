@@ -2,18 +2,13 @@
 using Application.DTO.Candidate;
 using Application.DTO.Recruiter;
 using Application.Interfaces;
-using Application.Producers.RegisterProducer;
+using Application.Producers;
 using Application.Services;
 using Application.Services.ServiceHelpers;
 using Application.Validators;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application
 {

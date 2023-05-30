@@ -1,7 +1,7 @@
 ﻿using Application.DTO;
 using Application.DTO.Candidate;
 using Application.DTO.Recruiter;
-using Application.Producers.RegisterProducer;
+using Application.Producers;
 using AutoMapper;
 
 namespace Application.Services.ServiceHelpers
