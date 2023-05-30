@@ -1,0 +1,13 @@
+services:
+
+  rabbitmq:
+    image: rabbitmq:3.11-management
+    container_name: register-service
+    ports:
+      - 5671:5671
+      - 15671:15671
+    volumes:
+  - rabbitmq_data:/var/lib/rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
