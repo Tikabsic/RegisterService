@@ -32,19 +32,16 @@ namespace Application.Producers
 
         internal void RegisterCandidate(CandidateUserServiceDTO dto)
         {
-            // Serializacja obiektu dto do postaci bajtowej
             byte[] messageBody = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(dto));
 
-            // Ustawienie właściwości wiadomości
             var properties = _channel.CreateBasicProperties();
-            properties.Persistent = true; // Ustawienie właściwości wiadomości jako trwałe (durable)
+            properties.Persistent = true;
 
-            // Publikowanie wiadomości na kolejce "RegisterCandidate"
             _channel.BasicPublish(
-               exchange: "", // Pusty string oznacza domyślną wymianę
-               routingKey: _queue, // Klucz routingu - nazwa kolejki
-               basicProperties: properties, // Właściwości wiadomości
-               body: messageBody); // Zawartość wiadomości
+               exchange: "",
+               routingKey: _queue,
+               basicProperties: properties,
+               body: messageBody);
 
             _channel.Close();
         }

@@ -3,9 +3,9 @@ using FluentValidation;
 
 namespace Application.Validators
 {
-    internal class RegisterRequestValidator : AbstractValidator<BaseDTO>
+    internal class CredentialsRegisterRequestValidator : AbstractValidator<BaseDTO>
     {
-        public RegisterRequestValidator()
+        public CredentialsRegisterRequestValidator()
         {
             RuleFor(c => c.Email)
                 .EmailAddress()
